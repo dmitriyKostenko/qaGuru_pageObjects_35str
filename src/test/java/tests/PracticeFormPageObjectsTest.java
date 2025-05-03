@@ -30,8 +30,10 @@ public class PracticeFormPageObjectsTest extends TestBase {
 
     @Test
     @DisplayName("Проверка успешного заполнения всех полей формы")
-    void successfulSubmit() {
-        practiceForm.openPage();
+    void successfulSubmitTest() {
+        practiceForm
+                .openPage()
+                .removeBanner();
 
         practiceForm
                 .setFirstName(firstName)
@@ -66,8 +68,10 @@ public class PracticeFormPageObjectsTest extends TestBase {
 
     @Test
     @DisplayName("Проверка успешного заполнения обязательных полей формы")
-    void successfulRequiredSubmit() {
-        practiceForm.openPage();
+    void successfulRequiredSubmitTest() {
+        practiceForm
+                .openPage()
+                .removeBanner();
 
         practiceForm
                 .setFirstName(firstName)
@@ -85,8 +89,10 @@ public class PracticeFormPageObjectsTest extends TestBase {
 
     @Test
     @DisplayName("Валидация обязательных полей формы")
-    void validationRequiredSubmit() {
-        practiceForm.openPage();
+    void validationRequiredSubmitTest() {
+        practiceForm
+                .openPage()
+                .removeBanner();
 
         practiceForm
                 .setLastName(lastName)

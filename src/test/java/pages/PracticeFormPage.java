@@ -27,6 +27,11 @@ public class PracticeFormPage {
 
     public PracticeFormPage openPage() {
         open("/automation-practice-form");
+
+        return this;
+    }
+
+    public PracticeFormPage removeBanner() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
